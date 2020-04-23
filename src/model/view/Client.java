@@ -2,7 +2,7 @@ package model.view;
 
 import model.visitor.*;
 public class Client {
-	//TEST CLIENT
+	//CLIENT
 	public static void main(String[] args)  
     { 
         IterateThroughCart iTC = new IterateThroughCart();
@@ -10,7 +10,7 @@ public class Client {
         double taxTotal = iTC.calcTax(items);//gets total of all items
         System.out.println("Total with tax added: " + taxTotal);
     } 
-	//TEST OTHER PATTERN
+	//OTHER PATTERN
 	
 }
 	

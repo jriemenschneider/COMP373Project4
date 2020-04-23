@@ -12,14 +12,5 @@ public class IterateThroughCart{
 		return taxTotal;
 	}
 	
-	public double calcSubTotal(Visitable[] items)  
-    { 
-        Visitor visitor = new TaxVisitor(); 
-        double subtotal=0; 
-        for(Visitable item : items) 
-        { 
-            subtotal = subtotal + item.accept(visitor); 
-        } 
-        return subtotal; 
-    } 
+	
 }
