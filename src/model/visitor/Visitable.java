@@ -1,5 +1,5 @@
 package model.visitor;
 
 public interface Visitable {
-	public void accept(Visitor visitor);
+	public float accept(Visitor visitor);
 }

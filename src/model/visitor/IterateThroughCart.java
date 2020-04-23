@@ -9,7 +9,8 @@ public class IterateThroughCart{
 		for(Visitable item: cartItems) {
 			item.accept(visitor);
 		}
-		double taxTotal = visitor.getTaxTotal();
+		double taxTotal = 0;
+		//visitor.getTaxTotal();
 		return taxTotal;
 	}
 }
