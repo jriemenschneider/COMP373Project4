@@ -1,33 +1,33 @@
 package model.visitor;
 
 public class OrderCart implements Visitable{
-	float total;
-	float price;
+	static double total;
+	double price;
 	String nameOfItem;
-	float newTotal; 
+	double newTotal; 
 	int newNumOfItems;
-	float tax;
+	double tax;
 	
-	public OrderCart(String itemName, float price) {
+	public OrderCart(String itemName, double price) {
 		this.price = price;
 		this.nameOfItem = itemName;
 		
 	}
 	
-	public float accept(Visitor visitor) {
+	public double accept(Visitor visitor) {
 		return visitor.visit(this);//visits the object of this class
 	}
 	
-	public float getTotal() {
+	public static double getTotal() {
 		return total;
 	}
 	
-	public float addItem(String name, float price) {
+	public double addItem(String name, double price) {
 		total+= price;//add new item's cost to the total
 		return price;
 	}//may not need for this implementation
 	
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	
