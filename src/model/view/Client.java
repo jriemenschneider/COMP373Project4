@@ -10,7 +10,11 @@ public class Client {
         double taxTotal = iTC.calcTax(items);//gets total of all items
         System.out.println("Total with tax added: " + taxTotal);
     } 
-	//OTHER PATTERN
+	
+	public static void main(String [] args) {
+		//builder
+		
+	}
 	
 }
 	
