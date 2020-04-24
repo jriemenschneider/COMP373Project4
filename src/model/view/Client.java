@@ -9,12 +9,11 @@ public class Client {
 		Visitable[] items = new Visitable[] {new OrderCart("Apples", 10.00), new OrderCart("Clorox Wipes", 20.00), new OrderCart("Toilet Paper One Square",  100.00)};
         double taxTotal = iTC.calcTax(items);//gets total of all items
         System.out.println("Total with tax added: " + taxTotal);
+        //////Builder Client in this main function(put below here)
+        
     } 
 	
-	public static void main(String [] args) {
-		//builder
-		
-	}
+	
 	
 }
 	
