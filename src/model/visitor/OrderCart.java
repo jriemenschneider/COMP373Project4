@@ -18,7 +18,7 @@ public class OrderCart implements Visitable{
 		return visitor.visit(this);//visits the object of this class
 	}
 	
-	public static double getTotal() {
+	public double getTotal() {
 		return total;
 	}
 	
