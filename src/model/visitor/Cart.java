@@ -1,7 +1,10 @@
 package model.visitor;
 
 public class Cart {
-	
+	private final double total; 
+    private final double price; 
+    private final String nameOfItem;
+    
 	public Cart (Builder builder) {
 		this.total = builder.total;
 		this.price = builder.price;
