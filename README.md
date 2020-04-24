@@ -1,5 +1,8 @@
 Visitor Pattern: Visitor lets you define a new operation without changing the classes of the elements on which it operates.
-Composite Pattern: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat 
+Builder Pattern: --update--
+
+
+Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat 
 individual objects and compositions of objects uniformly.
 
 Project 4 Description: In this project, we will practice the implementation of design patterns.
