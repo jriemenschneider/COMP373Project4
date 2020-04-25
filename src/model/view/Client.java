@@ -11,9 +11,38 @@ public class Client {
         System.out.println("Total with tax added: " + taxTotal);
         //////Builder Client in this main function(put below here)
         
+        private volatile Cart cart;
+        
+        public client() {
+        	Thread t1 = new Thread(new Runnable() {
+        		@Override
+        		public void run() {
+        			cart = Cart.Builder.newInstance()
+        					.setTotal(3.00)
+        					.setPrice(3.00)
+        					.setNameOfItem("Avocado");
+        					.build();
+        	}
+        	});
+        	Thread t2 = new Thread(new Runnable() {
+        		@Override
+        		public void run() {
+        			cart = Cart.Builder.newInstance()
+        					.setTotal(5.00)
+        					.setPrice(5.00)
+        					.setNameOfItem("Candy")
+        					.build();
+        		}
+        	});
+        			
+        t1.start();  
+        t2.start();
+        
     } 
-	
-	
+	public Cart getCart() {
+		
+		return cart; 
+	}
 	
 }
 	
