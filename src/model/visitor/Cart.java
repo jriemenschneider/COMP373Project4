@@ -47,7 +47,16 @@ public class Cart {
 		}
 		
 	}
-	public String toString() {
-		return "total = " + this.total + ", price = " + this.price + ", name of item = " + this.nameOfItem;
+
+
+	public Object addToCart(String string, double d) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
+
+
+	
 }
+	

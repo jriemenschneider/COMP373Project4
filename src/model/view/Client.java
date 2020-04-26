@@ -1,6 +1,7 @@
 package model.view;
 
 import model.visitor.*;
+import model.visitor.Cart.Builder;
 public class Client {
 	//CLIENT
 	public static void main(String[] args)  
@@ -10,21 +11,12 @@ public class Client {
         double taxTotal = iTC.calcTax(items);//gets total of all items
         System.out.println("Total with tax added: " + taxTotal);
         //////Builder Client in this main function(put below here)
+      
+       private volatile Cart cart;
         
-        private volatile Cart cart;
-        
-        public client() {
+       public void client() {
+
         	Thread t1 = new Thread(new Runnable() {
-        		@Override
-        		public void run() {
-        			cart = Cart.Builder.newInstance()
-        					.setTotal(3.00)
-        					.setPrice(3.00)
-        					.setNameOfItem("Avocado");
-        					.build();
-        	}
-        	});
-        	Thread t2 = new Thread(new Runnable() {
         		@Override
         		public void run() {
         			cart = Cart.Builder.newInstance()
@@ -35,16 +27,16 @@ public class Client {
         		}
         	});
         			
-        t1.start();  
-        t2.start();
+       
+        t1.start();
         
     } 
 	public Cart getCart() {
 		
 		return cart; 
-	}
-	
+    }
 }
+
 	
 
 
