@@ -19,18 +19,18 @@ public class TestBuilder {
 	public void patternTest() {
 		Cart cr = new Cart(null);
 		
-		String result = Cart.price("Candy", 10);
+		String result = Cart.setPrice(10);
 		
-		assertEquals("Candy", result);
+		assertEquals(10, result);
 	}
 	
 	@Test
 	public void patternTestTwo() {
 		Cart cr = new Cart(null);
 		
-		String result = Cart.nameOfItem("Candy", "Flour");
+		String result = Cart.setNameOfItem("Candy");
 		
-		assertEquals("Candy Flour", result);
+		assertEquals("Candy", result);
 		
 	}
 	
